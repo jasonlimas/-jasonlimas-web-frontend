@@ -1,0 +1,16 @@
+.app {
+    height: 100vh;
+
+    .sections {
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: crimson;
+        position: relative;
+        top: 80px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
