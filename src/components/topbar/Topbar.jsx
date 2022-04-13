@@ -11,9 +11,9 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
         </div>
         <div className="right">
           <div className="hamburger" onClick={handleHamburgerClick}>
-            <span className="line1"></span>
-            <span className="line2"></span>
-            <span className="line3"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div> 
         </div>
       </div>
