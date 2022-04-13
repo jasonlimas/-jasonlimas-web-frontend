@@ -12,10 +12,10 @@ export default function Intro() {
             backSpeed: 60,
             strings: ['Developer', 'Coffee Enthusiast'],
       })
-  })
+  }, [])
 
   return (
-    <div className='intro'>
+    <div className='intro' id='intro'>
         <div className="left">
             <div className="wrapper">
                 <h2>Hello! My name is</h2>
@@ -24,7 +24,9 @@ export default function Intro() {
             </div>
         </div>
         <div className="right">
-            <img src="assets/me-intro.jpg" alt="" />
+            <div className="imgContainer">
+                <img src="assets/me-intro.jpg" alt="" />
+            </div>
         </div>
     </div>
   )
