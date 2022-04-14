@@ -12,6 +12,16 @@ export default function Contact() {
         </div>
         <div className="right">
             <h2>Contact Me</h2>
+            <p>
+                Feel free to leave me any message using the form below. I'll reply as soon as possible.<br></br>
+                Also, you can also reach out on my social media!
+            </p>
+
+            <form>
+                <input type="text" placeholder="Email" />
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </div>
   )
