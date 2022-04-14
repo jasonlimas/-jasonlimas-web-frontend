@@ -72,6 +72,10 @@
                 align-items: center;
             }
         }
+
+        @include mobile {
+            flex: 0.4;
+        }
     }
 
     .right {
@@ -93,9 +97,13 @@
                 border-radius: 50%;
 
                 @include mobile {
-                    height: 43%;
+                    height: 44%;
                 }
             }
+        }
+
+        @include mobile {
+            flex: 0.6;
         }
     }
 
