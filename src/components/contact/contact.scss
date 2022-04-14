@@ -42,17 +42,56 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            label {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
             
             input {
                 font-size: 16px;
-                width: 300px;
-                border-width: 1px;
+                width: 350px;
+                border: none;
                 border-radius: 0.25rem;
                 padding: 12px;
+                margin: 5px 0;
                 appearance: none;
 
                 &:focus {
                     outline: none;
+                }
+            }
+
+            textarea {
+                font-size: 16px;
+                width: 350px;
+                min-height: 150px;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 12px;
+                margin: 5px 0;
+                appearance: none;
+                resize: vertical;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                font-size: 16px;
+                width: 200px;
+                padding: 12px;
+                margin: 15px 0;
+                background-color: $lighterGrey;
+                border: 3px solid $colorSilver;
+                color: $colorSilver;
+                transition: all 0.4s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $colorSilver;
+                    color: $primaryColor;
                 }
             }
         }
