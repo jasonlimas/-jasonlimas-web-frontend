@@ -26,12 +26,18 @@
 
         .iconMail {
             color: $colorSilver;
+            transition: all 0.7s ease;
+
+            &:hover {
+                color: white;
+                transform: scale(1.05);
+            }
         }
     }
 
     .iconInfo {
         font-size: 50px;
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
 
