@@ -8,12 +8,12 @@
     color: $colorGainsboro;
 
     h1 {
-        font-size: 50px;
-        margin: 8px 0 20px 0;
+        font-size: 40px;
+        margin: 8px 0 5px 0;
 
         @include mobile {
             font-size: 28px;
-            margin: 5px 0 5px 0;
+            margin: 10px 0 1px 0;
         }
     }
 
@@ -25,7 +25,7 @@
         background-color: $colorGainsboro;
 
         @include mobile {
-            margin: 10px 0;
+            margin: 5px 0;
             width: 40%;
         }
     }
@@ -46,31 +46,31 @@
     }
 
     .iconInfo {
-        font-size: 50px;
+        font-size: 40px;
         margin-top: 25px;
 
         @include mobile {
+            display: none;
             font-size: 35px;
             margin-top: 15px;
         }
     }
 
-    .pContainer {
-        width: 55%;
+    .pDesc {
+        width: 70%;
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.6;
         text-align: justify;
-
-        .pDesc {
-    
-            @include mobile {
-                width: 80%;
-                height: 60%;
-                font-size: 13px;
-            }
+        
+        @include mobile {
+            width: 80%;
+            height: 75%;
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 0;
         }
     }
-
+    
     .pContact {
         font-size: 12px;
         line-height: 1.5;
