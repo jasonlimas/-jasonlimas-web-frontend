@@ -1,6 +1,7 @@
 import './intro.scss'
 import { useEffect, useRef } from 'react'
 import { init } from 'ityped'
+import Links from './Links';
 
 export default function Intro() {
   const ref = useRef();
@@ -21,6 +22,7 @@ export default function Intro() {
                 <h2>Hello! My name is</h2>
                 <h1>Jason Limas</h1>
                 <h3>I'm a <span ref={ref}></span></h3>
+                <Links />
             </div>
         </div>
         <div className="right">
