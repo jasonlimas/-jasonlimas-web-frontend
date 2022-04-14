@@ -55,17 +55,19 @@
         }
     }
 
-
-    .pDesc {
+    .pContainer {
         width: 55%;
         font-size: 15px;
         line-height: 1.5;
         text-align: justify;
 
-        @include mobile {
-            width: 80%;
-            height: 60%;
-            font-size: 13px;
+        .pDesc {
+    
+            @include mobile {
+                width: 80%;
+                height: 60%;
+                font-size: 13px;
+            }
         }
     }
 

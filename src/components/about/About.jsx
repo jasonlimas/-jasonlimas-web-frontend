@@ -6,11 +6,20 @@ export default function About() {
     <div className='about' id='about'>
         <Info className='iconInfo' />
         <h1>About Me</h1>
-        <p className='pDesc'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis felis nulla, tempus eu urna sed, placerat tincidunt orci. Mauris id ante commodo, consequat odio nec, luctus orci. Ut a quam sed orci ornare efficitur. Aliquam erat volutpat. Donec commodo non ex non ullamcorper. Fusce congue lobortis enim, ut porta orci tempor sed. Donec volutpat sed mauris ac porttitor. Nam nulla arcu, semper in velit sed, consectetur mattis arcu. Quisque pretium nibh ut ipsum maximus auctor. Sed nec sodales tortor. In hac habitasse platea dictumst. Duis eget lacinia lectus, quis fringilla arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nec posuere magna.
-
-  Ut sit amet leo sed justo gravida sollicitudin. Proin sagittis tellus est, vel rutrum elit maximus vel. Donec accumsan odio a magna efficitur varius. Aliquam erat volutpat. Pellentesque pretium nunc in lacus suscipit ultricies. Vivamus elementum ornare tellus, ut convallis mi fermentum et. Morbi varius, nulla id eleifend cursus, purus neque ultrices lorem, eget elementum lectus justo eget mauris. Suspendisse tortor lectus, lobortis in dignissim suscipit, suscipit at magna. In consectetur dui eu enim mollis faucibus. Aliquam quis venenatis est. Phasellus suscipit nisl diam, ut pharetra metus dictum posuere. Mauris pellentesque orci vel neque dignissim, quis ornare risus mollis. Suspendisse ac malesuada magna. Praesent rutrum lacus eget ante varius, mattis fermentum sapien sodales. Ut sed arcu vitae lacus bibendum rutrum. Donec ultricies ex sodales lobortis fringilla.
-        </p>
+        <div className='pContainer'>
+          <p className='pDesc'>
+            Hi! I'm Jason. I'm an undergraduate Computer Science student at Deakin University, and I'm also currently working as a full-stack developer at XDC Indonesia. I'm passionate about my work and software engineering in general. I built this website as a form of demonstration of my proficiency in web development.
+          </p>
+          <p className='pDesc'>
+            I've been coding since 2017 and have built several apps with various programming languages throughout the years. When I started working as a full-stack developer, I built my first major project with the Laravel framework, which made me fall in love with web development. Since then, I've been spending my free time discovering many tech stacks and familiarizing myself more with the fundamentals of modern web apps.
+          </p>
+          <p className='pDesc'>
+            Outside of work and studies, I love exploring the world of specialty coffee. I like reading books about coffee, learning more about various brew methods and recipes, as well as tasting coffees from different origins.
+          </p>
+          <p className='pDesc'>
+            This page serves as a place to introduce myself and express my creativity through web designs and the things I write. In the future, I'm planning to expand this site by adding a blog page and a gallery, where I can write about things I'm interested in and show some photographs.
+          </p>
+        </div>
         <span></span>
         <p className='pContact'>
           You can contact me using the form at the bottom of this page, <br></br>
