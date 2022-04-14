@@ -10,6 +10,11 @@
     h1 {
         font-size: 50px;
         margin: 8px 0 20px 0;
+
+        @include mobile {
+            font-size: 30px;
+            margin: 5px 0 5px 0;
+        }
     }
 
     span {
@@ -38,6 +43,11 @@
     .iconInfo {
         font-size: 50px;
         margin-top: 25px;
+
+        @include mobile {
+            font-size: 35px;
+            margin-top: 15px;
+        }
     }
 
 
@@ -46,6 +56,12 @@
         font-size: 15px;
         line-height: 1.5;
         text-align: justify;
+
+        @include mobile {
+            width: 80%;
+            height: 60%;
+            font-size: 13px;
+        }
     }
 
     .pContact {
@@ -54,5 +70,10 @@
         text-align: center;
         color: $colorSilver;
         margin-bottom: 2px;
+
+        @include mobile {
+            font-size: 11px;
+            width: 80%;
+        }
     }
 }
