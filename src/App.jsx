@@ -3,6 +3,7 @@ import './app.scss'
 import Topbar from './components/topbar/Topbar'
 import Menu from './components/menu/Menu'
 import Intro from './components/intro/Intro'
+import About from './about/About'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -13,6 +14,7 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
+        <About />
       </div>
     </div>
   );
