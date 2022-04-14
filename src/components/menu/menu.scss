@@ -11,11 +11,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     transition: all 0.5s ease;
 
     &.active {
         right: 0;
+    }
+
+    img {
+        margin: 90px 0 -90px 0;
+        width: 30%;
     }
 
     ul {
@@ -23,5 +28,11 @@
         padding: 0;
         list-style: none;
         width: 60%;
+    }
+
+    p {
+        margin-bottom: 50px;
+        color: $moreLighterGrey;
+        font-size: 13px;
     }
 }
