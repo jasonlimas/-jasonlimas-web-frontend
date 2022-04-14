@@ -7,7 +7,7 @@ export default function Contact() {
     }
 
   return (
-    <div className='contact'>
+    <div className='contact' id='contact'>
         <div className="left" style={leftStyle}>
         </div>
         <div className="right">
