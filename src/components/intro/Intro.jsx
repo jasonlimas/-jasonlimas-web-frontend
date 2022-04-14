@@ -11,7 +11,7 @@ export default function Intro() {
             showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
-            strings: ['Developer', 'Coffee Enthusiast', 'CS Student'],
+            strings: ['Developer', 'CS Student', 'Coffee Enthusiast'],
       })
   }, [])
 
