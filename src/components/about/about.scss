@@ -7,24 +7,46 @@
     align-items: center;
     color: $colorGainsboro;
 
-    .icon {
-        font-size: 50px;
-        margin-top: 50px;
-    }
-
-    .pContainer {
-        width: 55%;
-
-        p {
-            font-size: 15px;
-            line-height: 1.5;
-            text-align: justify;
-        }
-    }
-
     h1 {
         font-size: 50px;
         margin: 8px 0 20px 0;
     }
 
+    span {
+        margin: 15px 0;
+        width: 30%;
+        height: 2px;
+        border-radius: 5px;
+        background-color: $colorGainsboro;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        .iconMail {
+            color: $colorSilver;
+        }
+    }
+
+    .iconInfo {
+        font-size: 50px;
+        margin-top: 30px;
+    }
+
+
+    .pDesc {
+        width: 55%;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .pContact {
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: center;
+        color: $colorSilver;
+        margin-bottom: 2px;
+    }
 }
