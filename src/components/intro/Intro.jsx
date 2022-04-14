@@ -8,7 +8,7 @@ export default function Intro() {
 
   useEffect(() => {
       init(ref.current, {
-            showCursor: false,
+            showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
             strings: ['Developer', 'Coffee Enthusiast', 'CS Student'],
