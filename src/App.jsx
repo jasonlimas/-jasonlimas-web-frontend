@@ -3,7 +3,7 @@ import './app.scss'
 import Topbar from './components/topbar/Topbar'
 import Menu from './components/menu/Menu'
 import Intro from './components/intro/Intro'
-import About from './about/About'
+import About from './components/about/About'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
