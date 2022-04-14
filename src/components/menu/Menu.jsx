@@ -1,4 +1,5 @@
 import './menu.scss'
+import { Star, AccountBox, Mail } from '@material-ui/icons'
 import ListElement from './ListElement'
 
 export default function Menu({ menuOpen, setMenuOpen }) {
@@ -7,9 +8,9 @@ export default function Menu({ menuOpen, setMenuOpen }) {
   return (
     <div className={'menu ' + (menuOpen && 'active')}>
         <ul>
-          <ListElement name='Intro' link='#intro' handleClick={handleClick} />
-          <ListElement name='About' link='#about' handleClick={handleClick} />
-          <ListElement name='Contact' link='#contact' handleClick={handleClick} />
+          <ListElement name='INTRO' link='#intro' handleClick={handleClick} />
+          <ListElement name='ABOUT' link='#about' handleClick={handleClick} />
+          <ListElement name='CONTACT' link='#contact' handleClick={handleClick} />
         </ul> 
     </div>
   )
