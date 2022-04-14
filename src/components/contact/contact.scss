@@ -38,6 +38,8 @@
         p {
             text-align: center;
             line-height: 1.5;
+            width: 50%;
+            margin-bottom: 0;
 
             @include mobile {
                 font-size: 12px;

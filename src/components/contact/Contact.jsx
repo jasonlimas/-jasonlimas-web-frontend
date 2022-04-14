@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="right">
             <h2>Contact Me</h2>
             <p>
-                Feel free to leave me any message using the form below. I'll reply as soon as possible.<br></br>
+                Feel free to leave me any message using the form below. I'll reply as soon as possible.
                 Also, you can also reach out on my social media!
             </p>
 
