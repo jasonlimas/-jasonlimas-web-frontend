@@ -1,5 +1,4 @@
 import './menu.scss'
-import { useRef, useEffect } from 'react'
 import ListElement from './ListElement'
 
 export default function Menu({ menuOpen, setMenuOpen }) {
