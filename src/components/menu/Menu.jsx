@@ -3,11 +3,11 @@ import { useRef, useEffect } from 'react'
 import ListElement from './ListElement'
 
 export default function Menu({ menuOpen, setMenuOpen }) {
-  const ref = useRef()
+  // const ref = useRef()
 
   const handleClick = () => setMenuOpen(false)
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Check if outside of ref is clicked
     const checkClickOutside = e => {
       if (menuOpen && ref.current && !ref.current.contains(e.target)) {
@@ -20,10 +20,10 @@ export default function Menu({ menuOpen, setMenuOpen }) {
 
     // Cleanup the event listener
     return () => document.removeEventListener('mousedown', checkClickOutside)
-  }, [menuOpen])
+  }, [menuOpen])*/
 
   return (
-    <div className={'menu ' + (menuOpen && 'active')} ref={ref}>
+    <div className={'menu ' + (menuOpen && 'active')}>
       <img src="assets/logo-white.png" alt="" />
         <ul>
           <ListElement name='INTRO' link='#intro' handleClick={handleClick} />
