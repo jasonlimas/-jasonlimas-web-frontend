@@ -35,4 +35,9 @@
         color: $moreLighterGrey;
         font-size: 13px;
     }
+
+    @include mobile {
+        width: 300px;
+        right: -300px;
+    }
 }
