@@ -20,6 +20,11 @@
             font-size: 30px;
             margin: 10px 0 1px 0;
         }
+
+        @include laptop {
+            font-size: 35px;
+            margin: 10px 0 1px 0;
+        }
     }
 
     span {
@@ -56,13 +61,16 @@
 
         @include mobile {
             display: none;
-            font-size: 35px;
-            margin-top: 15px;
         }
 
         @include tablet {
             font-size: 30px;
             margin-top: 15px;
+        }
+
+        @include laptop {
+            font-size: 35px;
+            margin-top: 25px;
         }
     }
 
@@ -83,6 +91,10 @@
         @include tablet {
             width: 80%;
             font-size: 14px;
+        }
+
+        @include laptop {
+            width: 65%;
         }
     }
     
