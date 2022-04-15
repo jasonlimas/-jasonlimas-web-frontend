@@ -24,12 +24,12 @@
 
                 @include mobile {
                     font-size: 40px;
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0;
                 }
 
                 @include tablet {
-                    font-size: 45px;
-                    margin: 5px 0 5px 0;
+                    font-size: 50px;
+                    margin: 5px 0;
                 }
             }
 
@@ -39,12 +39,11 @@
 
                 @include mobile {
                     font-size: 27px;
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0;
                 }
 
                 @include tablet {
-                    font-size: 30px;
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0;
                 }
             }
 
@@ -73,16 +72,20 @@
 
                 @include mobile {
                     font-size: 20px;
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0;
                 }
 
                 @include tablet {
-                    font-size: 25px;
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0;
                 }
             }
 
             @include mobile {
+                padding-left: 0;
+                align-items: center;
+            }
+
+            @include tablet {
                 padding-left: 0;
                 align-items: center;
             }
@@ -120,7 +123,7 @@
                 }
 
                 @include tablet {
-                    height: 80%;
+                    height: 65%;
                 }
             }
         }
@@ -135,6 +138,11 @@
     }
 
     @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include tablet {
         flex-direction: column;
         align-items: center;
     }
