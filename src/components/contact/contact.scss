@@ -11,9 +11,8 @@
         flex: 0.4;
         overflow: hidden;
 
-        img {
-            width: 100%;
-            align-items: flex-start;
+        @include tablet {
+            background-position: 50% 75%;
         }
     }
 
@@ -27,11 +26,16 @@
 
         h2 {
             font-size: 40px;
-            margin-bottom: 2px;
+            margin: 0 0 0 2px;
 
             @include mobile {
                 font-size: 28px;
-                margin: 2px;
+                margin: 2px 0;
+            }
+
+            @include tablet {
+                font-size: 34px;
+                margin: 15px 0;
             }
         }
 
@@ -46,6 +50,11 @@
                 width: 80%;
                 margin: 2px 0;
             }
+
+            @include tablet {
+                font-size: 16px;
+                width: 75%;
+            }
         }
 
         form {
@@ -56,11 +65,6 @@
             align-items: center;
             justify-content: center;
 
-            label {
-                font-size: 18px;
-                margin-bottom: 5px;
-            }
-            
             input {
                 font-size: 15px;
                 width: 370px;
@@ -78,6 +82,10 @@
                     font-size: 12px;
                     width: 200px;
                     padding: 8px;
+                }
+
+                @include tablet {
+                    font-size: 14px;
                 }
             }
 
@@ -131,6 +139,10 @@
     }
 
     @include mobile {
+        flex-direction: column;
+    }
+
+    @include tablet {
         flex-direction: column;
     }
 }    
