@@ -16,12 +16,16 @@
     
             &:hover {
                 color: white;
-                transform: scale(1.2);
+                transform: scale(1.05);
             }
         }
     }
     
     @include mobile {
+        margin: 18px 0;
+    }
+
+    @include tablet {
         margin: 18px 0;
     }
 }
