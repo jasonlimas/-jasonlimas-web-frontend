@@ -28,4 +28,8 @@
     @include tablet {
         margin: 18px 0;
     }
+
+    @include laptop {
+        margin: 18px 0;
+    }
 }

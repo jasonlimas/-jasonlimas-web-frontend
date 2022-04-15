@@ -31,6 +31,11 @@
                     font-size: 50px;
                     margin: 5px 0;
                 }
+
+                @include laptop {
+                    font-size: 50px;
+                    margin: 5px 0;
+                }
             }
 
             h2 {
@@ -43,6 +48,11 @@
                 }
 
                 @include tablet {
+                    margin: 5px 0;
+                }
+
+                @include laptop {
+                    font-size: 30px;
                     margin: 5px 0;
                 }
             }
@@ -78,6 +88,11 @@
                 @include tablet {
                     margin: 5px 0;
                 }
+
+                @include laptop {
+                    font-size: 27px;
+                    margin: 5px 0;
+                }
             }
 
             @include mobile {
@@ -97,6 +112,10 @@
 
         @include tablet {
             flex: 0.4;
+        }
+
+        @include laptop {
+            flex: 0.45;
         }
     }
 
@@ -125,6 +144,10 @@
                 @include tablet {
                     height: 65%;
                 }
+
+                @include laptop {
+                    height: 70%;
+                }
             }
         }
 
@@ -134,6 +157,10 @@
 
         @include tablet {
             flex: 0.6;
+        }
+
+        @include laptop {
+            flex: 0.55
         }
     }
 
