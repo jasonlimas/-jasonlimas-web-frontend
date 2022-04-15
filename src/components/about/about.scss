@@ -15,6 +15,11 @@
             font-size: 28px;
             margin: 10px 0 1px 0;
         }
+
+        @include tablet {
+            font-size: 30px;
+            margin: 10px 0 1px 0;
+        }
     }
 
     span {
@@ -54,6 +59,11 @@
             font-size: 35px;
             margin-top: 15px;
         }
+
+        @include tablet {
+            font-size: 30px;
+            margin-top: 15px;
+        }
     }
 
     .pDesc {
@@ -68,6 +78,11 @@
             font-size: 13px;
             line-height: 1.4;
             margin-bottom: 0;
+        }
+        
+        @include tablet {
+            width: 80%;
+            font-size: 14px;
         }
     }
     
