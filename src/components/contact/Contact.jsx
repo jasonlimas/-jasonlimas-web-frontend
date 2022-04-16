@@ -58,6 +58,11 @@ export default function Contact() {
             .then(res => {
                 console.log(res)
             })
+            .catch(error => {
+                setNotificationMessage('Oops! Something went wrong. Please try again later.')
+                setNotificationIsError(true)
+                console.log(error)
+            })
     }
 
     const handleEmailChange = e => setEmail(e.target.value)
