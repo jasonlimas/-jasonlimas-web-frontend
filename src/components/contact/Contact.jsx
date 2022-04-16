@@ -7,6 +7,8 @@ export default function Contact() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [submitted, setSubmitted] = useState(false)
+    const [notificationMessage, setNotificationMessage] = useState('')
+    const [notificationIsError, setNotificationIsError] = useState(false)
 
     const leftStyle = {
         backgroundImage: `URL('assets/me-outside-stali.jpg')`,
@@ -20,7 +22,16 @@ export default function Contact() {
 
         // Check if input email is valid
         if (validateEmail(email)) {
-            // do somehitng
+            setNotificationMessage('Please enter a valid email address')
+            setNotificationIsError(true)
+            return
+        }
+
+        // Check if input message is present
+        if (!message) {
+            setNotificationMessage('Please enter a message')
+            setNotificationIsError(true)
+            return
         }
 
         // Replace button with loading spinner
@@ -62,7 +73,7 @@ export default function Contact() {
             </p>
 
             <form onSubmit={sendMessage}>
-                <p>test</p>
+                
                 <input 
                     name="email"
                     type="text"
