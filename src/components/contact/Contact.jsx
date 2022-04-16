@@ -18,6 +18,11 @@ export default function Contact() {
         // Check if user has already submitted
         if (submitted) return
 
+        // Check if input email is valid
+        if (validateEmail(email)) {
+            // do somehitng
+        }
+
         // Replace button with loading spinner
         setSubmitted(true)
 
@@ -36,12 +41,13 @@ export default function Contact() {
             })
     }
 
-    const handleEmailChange = e => {
-        setEmail(e.target.value)
-    }
+    const handleEmailChange = e => setEmail(e.target.value)
 
-    const handleMessageChange = e => {
-        setMessage(e.target.value)
+    const handleMessageChange = e => setMessage(e.target.value)
+
+    const validateEmail = email => {
+        const regexPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return regexPattern.test(email)
     }
 
   return (
@@ -56,6 +62,7 @@ export default function Contact() {
             </p>
 
             <form onSubmit={sendMessage}>
+                <p>test</p>
                 <input 
                     name="email"
                     type="text"
