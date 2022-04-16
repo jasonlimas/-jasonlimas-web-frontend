@@ -1,6 +1,6 @@
 import './contact.scss'
 import { useState } from 'react'
-import { CircularProgress } from '@material-ui/core'
+import { CircularProgress, Fade } from '@material-ui/core'
 import axios from 'axios'
 
 export default function Contact() {
@@ -68,12 +68,19 @@ export default function Contact() {
                     placeholder="Message"
                     value={message}
                     onChange={handleMessageChange}></textarea>
-                
-                {
-                    submitted
-                        ? <CircularProgress color="inherit" />
+
+                <div className='submitWrapper'>
+                    {
+                        submitted ?
+                        <Fade
+                        in={submitted}
+                        style={{transitionDelay: submitted ? '200ms' : '0ms'}}
+                        unmountOnExit>
+                            <CircularProgress color="inherit" />
+                        </Fade>
                         : <button type="submit">Submit</button>
-                }
+                    }
+                </div>    
             </form>
         </div>
     </div>

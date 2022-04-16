@@ -118,7 +118,6 @@
                 font-size: 16px;
                 width: 200px;
                 padding: 12px;
-                margin: 15px 0;
                 background-color: $lighterGrey;
                 border: 3px solid $colorSilver;
                 color: $colorSilver;
@@ -135,6 +134,15 @@
                     font-size: 13px;
                     padding: 10px;
                 }
+            }
+
+            .submitWrapper {
+                width: 200px;
+                height: 50px;
+                padding: 15px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
