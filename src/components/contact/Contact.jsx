@@ -7,6 +7,7 @@ import Notification from './components/Notification'
 export default function Contact() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [submitting, setSubmitting] = useState(false)
     const [submitted, setSubmitted] = useState(false)
     const [notificationMessage, setNotificationMessage] = useState('')
     const [notificationIsError, setNotificationIsError] = useState(false)
@@ -42,9 +43,6 @@ export default function Contact() {
             return
         }
 
-        // Replace button with loading spinner
-        setSubmitted(true)
-
         // Build message object
         const data = {
             email: email,
@@ -55,8 +53,12 @@ export default function Contact() {
         axios
             .post('/contact-me/send', data)
             .then(res => {
-                setNotificationMessage('Message sent. Thank you!')
-                setNotificationIsError(false)
+                setSubmitting(true)
+                setTimeout(() => {
+                    setSubmitted(true)
+                    setNotificationMessage('Message sent. Thank you!')
+                    setNotificationIsError(false)
+                }, 3000)
             })
             .catch(error => {
                 setNotificationMessage('Oops! Something went wrong. Please try again later.')
@@ -104,10 +106,10 @@ export default function Contact() {
 
                         <div className='submitWrapper'>
                             {
-                                submitted ?
+                                submitting ?
                                 <Fade
-                                in={submitted}
-                                style={{transitionDelay: submitted ? '200ms' : '0ms'}}
+                                in={true}
+                                style={{transitionDelay: submitting ? '500ms' : '0ms'}}
                                 unmountOnExit>
                                     <CircularProgress color="inherit" />
                                 </Fade>
