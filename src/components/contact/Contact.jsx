@@ -1,17 +1,25 @@
 import './contact.scss'
 import { useState } from 'react'
+import { CircularProgress } from '@material-ui/core'
 import axios from 'axios'
 
 export default function Contact() {
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+
     const leftStyle = {
         backgroundImage: `URL('assets/me-outside-stali.jpg')`,
         height: '100%'
     }
-    
-    const [email, setEmail] = useState('')
-    const [message, setMessage] = useState('')
     const sendMessage = e => {
         e.preventDefault()
+
+        // Check if user has already submitted
+        if (submitted) return
+
+        // Replace button with loading spinner
+        setSubmitted(true)
 
         // Build message object
         const data = {
@@ -60,7 +68,12 @@ export default function Contact() {
                     placeholder="Message"
                     value={message}
                     onChange={handleMessageChange}></textarea>
-                <button type="submit">Submit</button>
+                
+                {
+                    submitted
+                        ? <CircularProgress color="inherit" />
+                        : <button type="submit">Submit</button>
+                }
             </form>
         </div>
     </div>
