@@ -54,9 +54,10 @@ export default function Contact() {
 
         // Post request
         axios
-            .post('', data)
+            .post('/contact-me/send', data)
             .then(res => {
-                console.log(res)
+                setNotificationMessage('Message sent. Thank you!')
+                setNotificationIsError(false)
             })
             .catch(error => {
                 setNotificationMessage('Oops! Something went wrong. Please try again later.')
