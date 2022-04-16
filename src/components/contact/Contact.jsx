@@ -86,34 +86,38 @@ export default function Contact() {
                 You can also reach out on my social media!
             </p>
 
-            <form onSubmit={sendMessage}>
+            <div className="formWrapper">
                 {notificationMessage && <Notification isError={notificationIsError} message={notificationMessage} />} 
-                <input 
-                    name="email"
-                    type="text"
-                    placeholder="Email"
-                    value={email}
-                    onChange={handleEmailChange} />
+                {!submitted &&
+                    <form onSubmit={sendMessage}>
+                        <input 
+                            name="email"
+                            type="text"
+                            placeholder="Email"
+                            value={email}
+                            onChange={handleEmailChange} />
 
-                <textarea
-                    name="message"
-                    placeholder="Message"
-                    value={message}
-                    onChange={handleMessageChange}></textarea>
+                        <textarea
+                            name="message"
+                            placeholder="Message"
+                            value={message}
+                            onChange={handleMessageChange}></textarea>
 
-                <div className='submitWrapper'>
-                    {
-                        submitted ?
-                        <Fade
-                        in={submitted}
-                        style={{transitionDelay: submitted ? '200ms' : '0ms'}}
-                        unmountOnExit>
-                            <CircularProgress color="inherit" />
-                        </Fade>
-                        : <button type="submit">Submit</button>
-                    }
-                </div>    
-            </form>
+                        <div className='submitWrapper'>
+                            {
+                                submitted ?
+                                <Fade
+                                in={submitted}
+                                style={{transitionDelay: submitted ? '200ms' : '0ms'}}
+                                unmountOnExit>
+                                    <CircularProgress color="inherit" />
+                                </Fade>
+                                : <button type="submit">Submit</button>
+                            }
+                        </div>    
+                    </form>
+                }
+            </div>
         </div>
     </div>
   )
