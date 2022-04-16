@@ -49,7 +49,6 @@ export default function Contact() {
         const data = {
             email: email,
             message: message,
-            date: new Date(),
         }
 
         // Post request
