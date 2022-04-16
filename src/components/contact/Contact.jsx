@@ -1,9 +1,39 @@
 import './contact.scss'
+import { useState } from 'react'
+import axios from 'axios'
 
 export default function Contact() {
     const leftStyle = {
         backgroundImage: `URL('assets/me-outside-stali.jpg')`,
         height: '100%'
+    }
+    
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const sendMessage = e => {
+        e.preventDefault()
+
+        // Build message object
+        const data = {
+            email: email,
+            message: message,
+            date: new Date(),
+        }
+
+        // Post request
+        axios
+            .post('/api/contact', data)
+            .then(res => {
+                console.log(res)
+            })
+    }
+
+    const handleEmailChange = e => {
+        setEmail(e.target.value)
+    }
+
+    const handleMessageChange = e => {
+        setMessage(e.target.value)
     }
 
   return (
@@ -17,10 +47,19 @@ export default function Contact() {
                 You can also reach out on my social media!
             </p>
 
-            <form>
-                <input name="email" type="text" placeholder="Email" />
+            <form onSubmit={sendMessage}>
+                <input 
+                    name="email"
+                    type="text"
+                    placeholder="Email"
+                    value={email}
+                    onChange={handleEmailChange} />
 
-                <textarea name="message" placeholder="Message"></textarea>
+                <textarea
+                    name="message"
+                    placeholder="Message"
+                    value={message}
+                    onChange={handleMessageChange}></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
