@@ -2,6 +2,7 @@ import './contact.scss'
 import { useState } from 'react'
 import { CircularProgress, Fade } from '@material-ui/core'
 import axios from 'axios'
+import Notification from './components/Notification'
 
 export default function Contact() {
     const [email, setEmail] = useState('')
@@ -20,14 +21,21 @@ export default function Contact() {
         // Check if user has already submitted
         if (submitted) return
 
+        // Check if input email is empty
+        if (!email) {
+            setNotificationMessage('Please enter your email address')
+            setNotificationIsError(true)
+            return
+        }
+
         // Check if input email is valid
-        if (validateEmail(email)) {
+        if (!validateEmail(email)) {
             setNotificationMessage('Please enter a valid email address')
             setNotificationIsError(true)
             return
         }
 
-        // Check if input message is present
+        // Check if input message is empty
         if (!message) {
             setNotificationMessage('Please enter a message')
             setNotificationIsError(true)
@@ -46,7 +54,7 @@ export default function Contact() {
 
         // Post request
         axios
-            .post('/api/contact', data)
+            .post('', data)
             .then(res => {
                 console.log(res)
             })
@@ -73,7 +81,7 @@ export default function Contact() {
             </p>
 
             <form onSubmit={sendMessage}>
-                
+                {notificationMessage && <Notification isError={notificationIsError} message={notificationMessage} />} 
                 <input 
                     name="email"
                     type="text"
