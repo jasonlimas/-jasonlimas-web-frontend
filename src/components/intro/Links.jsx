@@ -4,7 +4,7 @@ import { Instagram, Facebook, LinkedIn, GitHub } from '@material-ui/icons'
 export default function Links() {
   return (
     <div className='links'>
-        <a href='https://www.instagram.com/jasonandrea14/' target='_blank' rel='noreferrer'>
+        <a href='https://www.instagram.com/jasonadr14/' target='_blank' rel='noreferrer'>
             <Instagram className='icon' />
         </a>
         <a href="https://www.facebook.com/jasonlimas14/" target='_blank' rel='noreferrer'>
